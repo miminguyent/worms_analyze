@@ -24,8 +24,8 @@ function processFile(input, output, file) {
 	run("Subtract Background...", "rolling=10  sliding disable");
 	setAutoThreshold("Otsu");
 	//run("Threshold...");
-	setThreshold(10, 255, "raw");
-	//setThreshold(10, 255);
+	setThreshold(9, 255, "raw");
+	//setThreshold(9, 255);
 	run("Convert to Mask");
 	print("Saving to: " + output);
 	saveAs("Tiff", output + File.separator +  file);
