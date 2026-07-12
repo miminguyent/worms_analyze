@@ -28,20 +28,20 @@ function processFile(input, output, file) {
     //setThreshold(10, 255);
 	run("Convert to Mask", "method=Otsu background=Light convert");
 	run("Set Scale...", "distance=254 known=1 unit=mm");
-	run('TrackMate',
-    "use_gui=false " +
-    "save_to=[" + output + File.separator + file + "] " +
-    "export_to=[" + output + File.separator + file + "] " +
-    "display_results=true " +
-    "radius=0.5 " +
-    "threshold=2 " +
-    "subpixel=false " +
-    "median=false " +
-    "channel=1 " +
-    "max_distance=5 " +
-    "max_gap_distance=0 " +
-    "max_frame_gap=0"
-    );
+	// run('TrackMate',
+    // "use_gui=false " +
+    // "save_to=[" + output + File.separator + file + "] " +
+    // "export_to=[" + output + File.separator + file + "] " +
+    // "display_results=true " +
+    // "radius=0.5 " +
+    // "threshold=2 " +
+    // "subpixel=false " +
+    // "median=false " +
+    // "channel=1 " +
+    // "max_distance=5 " +
+    // "max_gap_distance=0 " +
+    // "max_frame_gap=0"
+    //);
 	print("Saving to: " + output);
 	saveAs("Tiff", output + File.separator +  file);
 		
